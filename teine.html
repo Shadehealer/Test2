@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>  <!-- siia käivad kõik parameetrid jne -->
+	
+	<link rel="icon" href="http://i2.kym-cdn.com/entries/icons/original/000/021/807/4d7.png"> <!-- lehe ikoon üleval, mitte eriti oluline. -->
+	
+	<meta charset="utf-8"/>
+	
+		<title>Lehe pealkiri</title>
+		
+		
+	</head>
+	
+	<body> <!-- siia käib kõik visuaalne -->
+	
+		
+		
+		<button onmouseover="essa();">a</button>
+		<button onmouseover="tessa();">b</button>
+		<button onmouseover="kossa();">c</button>
+		<button onmouseover="nessa();">d</button>
+		<button onmouseover="funktsioon();">Proovi</button>
+
+		
+		<div id="uuem"></div>
+		
+		<div id="tekstikast1"></div>
+		<div id="tekstikast2"></div>
+		
+		<script>  <!-- "Varjatud info", f12 saab näha. -->
+		
+			var vanakast = document.getElementById("tekstikast1");
+			var uuemkast = document.getElementById("tekstikast2");
+			
+			var a = 0;
+			var b = 0;
+			var c = 0;
+			var d = 0;
+			
+			vanakast.innerHTML="0000";
+			
+			function essa(){a +=1;if (a>9){a=0};vanakast.innerHTML =a+""+b+""+c+""+d;}
+			function tessa(){b +=1;if (b>9){b=0};vanakast.innerHTML =a+""+b+""+c+""+d;}
+			function kossa(){c +=1;if (c>9){c=0};vanakast.innerHTML =a+""+b+""+c+""+d;}
+			function nessa(){d +=1;if (d>9){d=0};vanakast.innerHTML =a+""+b+""+c+""+d;}
+			vastus = 0;
+			function funktsioon(){
+				if (a==1){
+				if (b==1){
+				if (c==1){
+				if (d==3){
+				vastus = 1;
+				}}
+			}}
+			if (vastus ==1){
+			vanakast.innerHTML="Noh, vist saab.";
+			vastus=0;
+			}
+			else{vanakast.innerHTML="Nope.";}}
+	
+			
+		</script>
+		
+	</body>
+	
+</html>
